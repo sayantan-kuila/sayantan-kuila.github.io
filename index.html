@@ -223,6 +223,8 @@
     .pub .title { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; line-height: 1.28; margin: 0 0 8px; color: var(--ink); letter-spacing: -0.01em; }
     .pub .authors { color: var(--ink-2); font-size: .95rem; margin: 0 0 4px; }
     .pub .authors b { font-weight: 600; color: var(--ink); }
+    .pub .authors sup { font-size: .7em; color: var(--gold); font-weight: 700; line-height: 0; }
+    .pub .authors .eq { display: inline-block; margin-left: 8px; font-size: .8rem; color: var(--ink-3); }
     .pub .venue { color: var(--ink-3); font-size: .9rem; margin: 0 0 14px; }
     .pub .venue em { font-style: italic; }
     .pub .actions { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -487,11 +489,12 @@
           </div>
         </article>
 
-        <article class="card pub reveal">
+        <article class="card pub featured reveal">
           <div class="year">2026<small>Workshop</small></div>
           <div>
+            <span class="badge"><svg class="i" viewBox="0 0 24 24" style="width:12px;height:12px"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Co-first author</span>
             <h3 class="title">“Thoughtful Coordination”: LLM Reasoning for Anomaly Detection in Complex Activity Sensing</h3>
-            <p class="authors">Debjit Chatterjee, <b>Sayantan Kuila</b>, Soumyajit Chatterjee, Sandip Chakraborty</p>
+            <p class="authors">Debjit Chatterjee<sup>*</sup>, <b>Sayantan Kuila</b><sup>*</sup>, Soumyajit Chatterjee, Sandip Chakraborty <span class="eq"><sup>*</sup>Equal contribution</span></p>
             <p class="venue"><em>22nd International Workshop on Context and Activity Modeling and Recognition with AI (CoMoRe-AI)</em>, in conjunction with IEEE PerCom 2026</p>
             <div class="actions">
               <a class="btn sm" href="https://scholar.google.com/citations?user=W-7VZDIAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Scholar</a>
