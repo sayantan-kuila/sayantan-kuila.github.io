@@ -257,6 +257,21 @@
     .tl .where { color: var(--ink-2); margin: 3px 0 0; font-size: .96rem; }
     .tl .note { color: var(--ink-2); font-size: .92rem; margin: 8px 0 0; line-height: 1.55; }
 
+    /* Teaching */
+    .courses { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .course { padding: 20px 22px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .course:hover { border-color: var(--line-2); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .course > div { min-width: 0; }
+    .course .code {
+      font-family: var(--mono); font-size: .78rem; font-weight: 600; letter-spacing: .04em; color: var(--accent);
+      background: var(--accent-soft); border: 1px solid transparent; border-radius: 10px; padding: 8px 10px; white-space: nowrap;
+    }
+    .course .top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+    .course h3 { margin: 0; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+    .course .when { color: var(--ink-3); font-size: .82rem; font-weight: 500; white-space: nowrap; background: var(--bg-2); border: 1px solid var(--line); padding: 2px 9px; border-radius: 999px; font-family: var(--mono); }
+    .course .meta { color: var(--ink-2); font-size: .92rem; margin: 6px 0 0; }
+    .course .note { color: var(--ink-2); font-size: .92rem; margin: 6px 0 0; line-height: 1.55; }
+
     /* Contact */
     .contact {
       position: relative; overflow: hidden; padding: 34px 34px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center;
@@ -301,7 +316,7 @@
 
     @media (max-width: 900px) {
       .grid3 { grid-template-columns: 1fr; }
-      .about, .two, .contact { grid-template-columns: 1fr; }
+      .about, .two, .contact, .courses { grid-template-columns: 1fr; }
       .hero { grid-template-columns: 1fr; gap: 36px; padding: 52px 0 56px; }
       .portrait { width: min(260px, 100%); justify-self: start; }
       .portrait .float { left: auto; right: -14px; }
@@ -336,6 +351,7 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#teaching">Teaching</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="tools">
@@ -562,6 +578,29 @@
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== Teaching ===== -->
+    <section id="teaching">
+      <div class="sec-head"><span class="num">06</span><h2>Teaching</h2><span class="rule"></span><span class="count">2 courses</span></div>
+      <div class="courses">
+        <article class="card course reveal">
+          <div class="code">CS31204</div>
+          <div>
+            <div class="top"><h3>Computer Networks</h3><span class="when">Spring 2026</span></div>
+            <p class="meta">Teaching Assistant · IIT Kharagpur</p>
+            <p class="note">Jointly taken by Prof. Abhijnan Chakraborty and <a href="https://sandipc-iitkgp.github.io/sandip-web/" target="_blank" rel="noopener">Prof. Sandip Chakraborty</a>.</p>
+          </div>
+        </article>
+        <article class="card course reveal">
+          <div class="code">CS60055</div>
+          <div>
+            <div class="top"><h3>Ubiquitous Computing</h3><span class="when">Autumn 2026</span></div>
+            <p class="meta">Teaching Assistant · IIT Kharagpur</p>
+            <p class="note">Taken by <a href="https://sandipc-iitkgp.github.io/sandip-web/" target="_blank" rel="noopener">Prof. Sandip Chakraborty</a>.</p>
+          </div>
+        </article>
       </div>
     </section>
 
