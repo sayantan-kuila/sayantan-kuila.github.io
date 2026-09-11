@@ -672,10 +672,13 @@
       var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
       var progress = document.getElementById('progress'), toTop = document.getElementById('toTop');
       function onScroll() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
         var y = window.scrollY + 96, current = null;
         sections.forEach(function (s) { if (s.offsetTop <= y) current = s; });
+        /* At (or within a few px of) the bottom the last section may never reach the
+           threshold line, so treat reaching the end of the page as being in it. */
+        if (max > 0 && window.scrollY >= max - 4) current = sections[sections.length - 1];
         links.forEach(function (a) { a.classList.toggle('active', !!current && a.getAttribute('href') === '#' + current.id); });
-        var max = document.documentElement.scrollHeight - window.innerHeight;
         progress.style.width = (max > 0 ? Math.min(100, window.scrollY / max * 100) : 0) + '%';
         toTop.classList.toggle('show', window.scrollY > 500);
       }
